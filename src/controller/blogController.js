@@ -6,8 +6,8 @@ export const fetchAndSaveBlogs = async (req, res) => {
   try {
     // 1️⃣ Login to get token
     const loginResponse = await axios.post("https://khanit.xyz/api/login", {
-      email: process.env.API_EMAIL,
-      password: process.env.API_PASSWORD,
+      email: process.env.BLOG_API_EMAIL,
+      password: process.env.BLOG_API_PASSWORD,
     });
 
     const token = loginResponse.data.token;
