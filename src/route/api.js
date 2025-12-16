@@ -30,7 +30,7 @@ router.post('/login', login);
 
 router.put('/profileUpdate/:id', Authentication, profileUpdate);
 router.delete('/profileDelete/:id', Authentication, checkRole('admin'), profileDelete);
-router.post('/profileDetails', Authentication, profileDetails);
+router.get('/profileDetails', Authentication, profileDetails);
 
 // ✅ Allow admin to view users
 router.get('/viewUserList', Authentication, checkRole('admin'), viewUserList);
