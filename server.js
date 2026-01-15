@@ -10,6 +10,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const app=new express();
+app.set('trust proxy', 1);
 
 // Middleware
 
